@@ -1,7 +1,7 @@
 Summary: NethServer configuration for php settings
 Name: nethserver-phpsettings
 Version: 1.0.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
@@ -23,6 +23,7 @@ NethServer configuration for php settings
 %preun
 
 %build
+%{makedocs}
 perl createlinks
 
 %install
@@ -38,5 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Tue Apr 7 2015 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.0.0-2-ns6
+- Added Italian translation (written in english, sorry)
+- Corrected the lack of help page
+
 * Sat Mar 7 2015 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.0.0-1-ns6
 - Initial release
