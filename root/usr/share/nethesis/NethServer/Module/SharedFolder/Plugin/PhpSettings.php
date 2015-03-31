@@ -10,12 +10,12 @@ use Nethgui\Controller\Table\Modify as Table;
  * @author stephane de labrusse <stephdl@de-labrusse.fr>
  * 
  */
-class  phpsettings  extends \Nethgui\Controller\Table\RowPluginAction
+class  PhpSettings  extends \Nethgui\Controller\Table\RowPluginAction
 {
 
     protected function initializeAttributes(\Nethgui\Module\ModuleAttributesInterface $base)
     {
-        return \Nethgui\Module\SimpleModuleAttributesProvider::extendModuleAttributes($base, 'phpsettings', 20);
+        return \Nethgui\Module\SimpleModuleAttributesProvider::extendModuleAttributes($base, 'PhpSettings', 20);
     }
 
 
