@@ -19,14 +19,5 @@ echo $view->panel()
 ->insert($view->slider('MaxFileUploads', $view::SLIDER_ENUMERATIVE | $view::LABEL_ABOVE)
     ->setAttribute('label', $T('Maximum file uploads (${0})')));
 
-$view->includeCss("
-    .generated-url {
-        margin-bottom: 10px;
-    }
-    .generated-url li {
-        margin-left: 25px;
-        list-style-type:circle;
-        font-family: monospace;
-    }
-");
+
 
