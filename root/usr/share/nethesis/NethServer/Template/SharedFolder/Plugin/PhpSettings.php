@@ -1,7 +1,7 @@
 <?php
 
 /* @var $view \Nethgui\Renderer\Xhtml */
-echo $view->fieldsetSwitch('Status', 'enabled', $view::FIELDSETSWITCH_CHECKBOX)->setAttribute('uncheckedValue', 'disabled')
+echo $view->panel()
 ->insert($view->checkbox('AllowUrlfOpen', 'enabled')->setAttribute('uncheckedValue', 'disabled'))
 
 ->insert($view->slider('MemoryLimit', $view::SLIDER_ENUMERATIVE | $view::LABEL_ABOVE)
