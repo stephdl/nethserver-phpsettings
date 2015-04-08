@@ -10,12 +10,12 @@ use Nethgui\Controller\Table\Modify as Table;
  * @author stephane de labrusse <stephdl@de-labrusse.fr>
  * 
  */
-class  phpsettings  extends \Nethgui\Controller\Table\RowPluginAction
+class  PhpSettings  extends \Nethgui\Controller\Table\RowPluginAction
 {
 
     protected function initializeAttributes(\Nethgui\Module\ModuleAttributesInterface $base)
     {
-        return \Nethgui\Module\SimpleModuleAttributesProvider::extendModuleAttributes($base, 'phpsettings', 20);
+        return \Nethgui\Module\SimpleModuleAttributesProvider::extendModuleAttributes($base, 'PhpSettings', 20);
     }
 
 
@@ -23,7 +23,6 @@ class  phpsettings  extends \Nethgui\Controller\Table\RowPluginAction
     {
      
         $schema = array(
-            array('Status', Validate::SERVICESTATUS, Table::FIELD, 'HttpStatus'),
             array('AllowUrlfOpen', Validate::SERVICESTATUS, Table::FIELD, 'PhpAllowUrlfOpen'),
             array('MemoryLimit',Validate::NOTEMPTY, Table::FIELD, 'PhpMemoryLimit'),
             array('UpMaxFileSize',Validate::NOTEMPTY, Table::FIELD, 'PhpUpMaxFileSize'),
@@ -33,7 +32,6 @@ class  phpsettings  extends \Nethgui\Controller\Table\RowPluginAction
         );
 
         $this
-            ->setDefaultValue('Status', 'enabled')
             ->declareParameter('AllowUrlfOpen')->setDefaultValue('AllowUrlfOpen', 'enabled')
             ->declareParameter('MemoryLimit')->setDefaultValue('MemoryLimit', 'disabled')
             ->declareParameter('UpMaxFileSize')->setDefaultValue('UpMaxFileSize', 'disabled')
