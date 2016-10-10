@@ -1,5 +1,5 @@
 <?php
-namespace NethServer\Module\SharedFolder\Plugin;
+namespace NethServer\Module\VirtualHosts\ModifyPlugin;
 
 use Nethgui\System\PlatformInterface as Validate;
 use Nethgui\Controller\Table\Modify as Table;
@@ -23,7 +23,7 @@ class  PhpSettings  extends \Nethgui\Controller\Table\RowPluginAction
     {
      
         $schema = array(
-            array('Status', Validate::SERVICESTATUS, Table::FIELD, 'HttpStatus'),
+            array('Status', Validate::SERVICESTATUS, Table::FIELD, 'status'),
             array('AllowUrlfOpen', Validate::SERVICESTATUS, Table::FIELD, 'PhpAllowUrlfOpen'),
             array('MemoryLimit',Validate::ANYTHING, Table::FIELD, 'PhpMemoryLimit'),
             array('UpMaxFileSize',Validate::ANYTHING, Table::FIELD, 'PhpUpMaxFileSize'),
@@ -97,6 +97,24 @@ class  PhpSettings  extends \Nethgui\Controller\Table\RowPluginAction
                 '1800' => $view->translate('${0} MB', array(1800)),
                 '1900' => $view->translate('${0} MB', array(1900)),
                 '2000' => $view->translate('${0} MB', array(2000)),
+                '3000' => $view->translate('${0} G', array(3)),
+                '4000' => $view->translate('${0} G', array(4)),
+                '5000' => $view->translate('${0} G', array(5)),
+                '6000' => $view->translate('${0} G', array(6)),
+                '7000' => $view->translate('${0} G', array(7)),
+                '8000' => $view->translate('${0} G', array(8)),
+                '9000' => $view->translate('${0} G', array(9)),
+                '10000' => $view->translate('${0} G', array(10)),
+                '11000' => $view->translate('${0} G', array(11)),
+                '12000' => $view->translate('${0} G', array(12)),
+                '13000' => $view->translate('${0} G', array(13)),
+                '14000' => $view->translate('${0} G', array(14)),
+                '15000' => $view->translate('${0} G', array(15)),
+                '16000' => $view->translate('${0} G', array(16)),
+                '17000' => $view->translate('${0} G', array(17)),
+                '18000' => $view->translate('${0} G', array(18)),
+                '19000' => $view->translate('${0} G', array(19)),
+                '20000' => $view->translate('${0} G', array(20)),
         ));
 
         $view['UpMaxFileSizeDatasource'] = \Nethgui\Renderer\AbstractRenderer::hashToDatasource(array(
@@ -131,6 +149,24 @@ class  PhpSettings  extends \Nethgui\Controller\Table\RowPluginAction
                 '1800' => $view->translate('${0} MB', array(1800)),
                 '1900' => $view->translate('${0} MB', array(1900)),
                 '2000' => $view->translate('${0} MB', array(2000)),
+                '3000' => $view->translate('${0} G', array(3)),
+                '4000' => $view->translate('${0} G', array(4)),
+                '5000' => $view->translate('${0} G', array(5)),
+                '6000' => $view->translate('${0} G', array(6)),
+                '7000' => $view->translate('${0} G', array(7)),
+                '8000' => $view->translate('${0} G', array(8)),
+                '9000' => $view->translate('${0} G', array(9)),
+                '10000' => $view->translate('${0} G', array(10)),
+                '11000' => $view->translate('${0} G', array(11)),
+                '12000' => $view->translate('${0} G', array(12)),
+                '13000' => $view->translate('${0} G', array(13)),
+                '14000' => $view->translate('${0} G', array(14)),
+                '15000' => $view->translate('${0} G', array(15)),
+                '16000' => $view->translate('${0} G', array(16)),
+                '17000' => $view->translate('${0} G', array(17)),
+                '18000' => $view->translate('${0} G', array(18)),
+                '19000' => $view->translate('${0} G', array(19)),
+                '20000' => $view->translate('${0} G', array(20)),
         ));
 
         $view['PostMaxSizeDatasource'] = \Nethgui\Renderer\AbstractRenderer::hashToDatasource(array(
@@ -163,6 +199,24 @@ class  PhpSettings  extends \Nethgui\Controller\Table\RowPluginAction
                 '1800' => $view->translate('${0} MB', array(1800)),
                 '1900' => $view->translate('${0} MB', array(1900)),
                 '2000' => $view->translate('${0} MB', array(2000)),
+                '3000' => $view->translate('${0} G', array(3)),
+                '4000' => $view->translate('${0} G', array(4)),
+                '5000' => $view->translate('${0} G', array(5)),
+                '6000' => $view->translate('${0} G', array(6)),
+                '7000' => $view->translate('${0} G', array(7)),
+                '8000' => $view->translate('${0} G', array(8)),
+                '9000' => $view->translate('${0} G', array(9)),
+                '10000' => $view->translate('${0} G', array(10)),
+                '11000' => $view->translate('${0} G', array(11)),
+                '12000' => $view->translate('${0} G', array(12)),
+                '13000' => $view->translate('${0} G', array(13)),
+                '14000' => $view->translate('${0} G', array(14)),
+                '15000' => $view->translate('${0} G', array(15)),
+                '16000' => $view->translate('${0} G', array(16)),
+                '17000' => $view->translate('${0} G', array(17)),
+                '18000' => $view->translate('${0} G', array(18)),
+                '19000' => $view->translate('${0} G', array(19)),
+                '20000' => $view->translate('${0} G', array(20)),
        ));
 
        $view['MaxExecTimeDatasource'] = \Nethgui\Renderer\AbstractRenderer::hashToDatasource(array(

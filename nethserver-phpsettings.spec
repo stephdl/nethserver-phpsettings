@@ -1,7 +1,7 @@
 Summary: NethServer configuration for php settings
 Name: nethserver-phpsettings
-Version: 1.0.0
-Release: 4%{?dist}
+Version: 1.1.0
+Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
@@ -9,7 +9,7 @@ URL: http://dev.nethserver.org/projects/nethforge/wiki/%{name}
 BuildRequires: nethserver-devtools
 
 AutoReq: no
-Requires: nethserver-httpd, nethserver-php, nethserver-ibays
+Requires: nethserver-httpd, nethserver-php, nethserver-virtualhosts
 
 
 %description
@@ -52,7 +52,11 @@ rm -rf $RPM_BUILD_ROOT
 %files -f e-smith-%{version}-filelist
 %defattr(-,root,root)
 
+#%dir %{_nseventsdir}/%{name}-update
 %changelog
+* Thu Oct 20 2016 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.0-1-ns7
+- NS7 version
+
 * Sun May 3 2015 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.0.0-4-ns6
 - disclamer
 
