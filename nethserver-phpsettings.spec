@@ -1,7 +1,7 @@
 Summary: NethServer configuration for php settings
 Name: nethserver-phpsettings
 Version: 1.0.0
-Release: 4%{?dist}
+Release: 5%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
