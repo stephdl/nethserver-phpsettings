@@ -52,6 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f e-smith-%{version}-filelist
 %defattr(-,root,root)
 
+%dir %{_nseventsdir}/%{name}-update
 %changelog
 * Sun May 3 2015 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.0.0-4-ns6
 - disclamer
