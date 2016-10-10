@@ -1,13 +1,14 @@
 {
-use esmith::AccountsDB;
+    use esmith::ConfigDB;
 
-my $accounts = esmith::AccountsDB->open_ro;
-my $AllowUrlfOpen = $accounts->get_prop("$Name",'PhpAllowUrlfOpen') || 'enabled';
-my $MemoryLimit = $accounts->get_prop("$Name",'PhpMemoryLimit') || '0';
-my $UpMaxFileSize = $accounts->get_prop("$Name",'PhpUpMaxFileSize') || '0';
-my $PostMaxSize = $accounts->get_prop("$Name",'PhpPostMaxSize') || '0';
-my $MaxExecTime = $accounts->get_prop("$Name",'PhpMaxExecTime') || 'disabled';
-my $MaxFileUploads = $accounts->get_prop("$Name",'PhpMaxFileUploads') || 'disabled';
+    my $vdb = esmith::ConfigDB->open_ro('vhosts') || die("Can't open vhosts db");
+
+my $AllowUrlfOpen = $vdb->get_prop("$VhostName",'PhpAllowUrlfOpen') || 'enabled';
+my $MemoryLimit = $vdb->get_prop("$VhostName",'PhpMemoryLimit') || '0';
+my $UpMaxFileSize = $vdb->get_prop("$VhostName",'PhpUpMaxFileSize') || '0';
+my $PostMaxSize = $vdb->get_prop("$VhostName",'PhpPostMaxSize') || '0';
+my $MaxExecTime = $vdb->get_prop("$VhostName",'PhpMaxExecTime') || 'disabled';
+my $MaxFileUploads = $vdb->get_prop("$VhostName",'PhpMaxFileUploads') || 'disabled';
 
 unless ($MaxExecTime eq 'disabled') {chop $MaxExecTime;}
 unless ($MaxFileUploads eq 'disabled') {chop $MaxFileUploads;}

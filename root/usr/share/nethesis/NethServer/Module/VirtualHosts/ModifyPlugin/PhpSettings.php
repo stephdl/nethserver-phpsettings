@@ -1,5 +1,5 @@
 <?php
-namespace NethServer\Module\SharedFolder\Plugin;
+namespace NethServer\Module\VirtualHosts\ModifyPlugin;
 
 use Nethgui\System\PlatformInterface as Validate;
 use Nethgui\Controller\Table\Modify as Table;
