@@ -9,7 +9,7 @@ URL: http://dev.nethserver.org/projects/nethforge/wiki/%{name}
 BuildRequires: nethserver-devtools
 
 AutoReq: no
-Requires: nethserver-httpd, nethserver-php, nethserver-ibays
+Requires: nethserver-httpd, nethserver-php, nethserver-virtualhosts
 
 
 %description
