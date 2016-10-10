@@ -23,7 +23,7 @@ class  PhpSettings  extends \Nethgui\Controller\Table\RowPluginAction
     {
      
         $schema = array(
-            array('Status', Validate::SERVICESTATUS, Table::FIELD, 'HttpStatus'),
+            array('Status', Validate::SERVICESTATUS, Table::FIELD, 'status'),
             array('AllowUrlfOpen', Validate::SERVICESTATUS, Table::FIELD, 'PhpAllowUrlfOpen'),
             array('MemoryLimit',Validate::ANYTHING, Table::FIELD, 'PhpMemoryLimit'),
             array('UpMaxFileSize',Validate::ANYTHING, Table::FIELD, 'PhpUpMaxFileSize'),
