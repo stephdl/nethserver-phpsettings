@@ -18,5 +18,6 @@ $OUT .= "      php_admin_value memory_limit $MemoryLimit"."M\n" if ($MemoryLimit
 $OUT .= "      php_admin_value upload_max_filesize $UpMaxFileSize"."M\n" if ($UpMaxFileSize ne '0');
 $OUT .= "      php_admin_value post_max_size $PostMaxSize"."M\n" if ($PostMaxSize ne '0');
 $OUT .= "      php_admin_value max_execution_time $MaxExecTime\n" if ($MaxExecTime ne 'disabled');
+$OUT .= "      php_admin_value max_input_time $MaxExecTime\n" if ($MaxExecTime ne 'disabled');
 $OUT .= "      php_admin_value max_file_uploads $MaxFileUploads\n" if ($MaxFileUploads ne 'disabled');
 }
