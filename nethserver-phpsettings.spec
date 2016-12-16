@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f e-smith-%{version}-filelist
 %defattr(-,root,root)
 
-#%dir %{_nseventsdir}/%{name}-update
+%dir %{_nseventsdir}/%{name}-update
 %changelog
 * Thu Oct 20 2016 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.0-1-ns7
 - NS7 version
