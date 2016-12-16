@@ -6,7 +6,7 @@ Php Settings
 Manage the Php version of Apache
 ================================
 
-You can set here which version of Php, Apache will run, either the default one or any other Php SCL version.
+You can modify here the settings of php. If you want to choose several version of Php you need to install nethserver-php-scl.
 
 Php Settings
 ============
