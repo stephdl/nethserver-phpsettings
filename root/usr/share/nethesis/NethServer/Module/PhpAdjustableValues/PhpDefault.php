@@ -16,7 +16,7 @@ class PhpDefault extends \Nethgui\Controller\AbstractController
     $executiontime = $this->createValidator()->memberOf('30','60','120','180','240','300','360','420','480','540','600');
     $inputtime = $this->createValidator()->memberOf('60','120','180','240','300','360','420','480','540','600');
 
-    $this->declareParameter('AllowUrlFopen', $this->createValidator()->memberOf('1','Off'), array('configuration', 'php', 'AllowUrlFopen'));
+    $this->declareParameter('AllowUrlFopen', $this->createValidator()->memberOf('On','Off'), array('configuration', 'php', 'AllowUrlFopen'));
     $this->declareParameter('MaxExecutionTime',  $executiontime , array('configuration', 'php', 'MaxExecutionTime'));
     $this->declareParameter('MemoryLimit', Validate::POSITIVE_INTEGER, array('configuration', 'php', 'MemoryLimit'));
     $this->declareParameter('PostMaxSize', Validate::POSITIVE_INTEGER, array('configuration', 'php', 'PostMaxSize'));
@@ -198,7 +198,7 @@ class PhpDefault extends \Nethgui\Controller\AbstractController
 
     public function onParametersSaved($changes)
     {
-        $this->getPlatform()->signalEvent('nethserver-php-save@post-process');
+        $this->getPlatform()->signalEvent('nethserver-php-update@post-process');
     }
 
 }
