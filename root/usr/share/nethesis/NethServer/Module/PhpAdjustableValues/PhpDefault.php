@@ -48,7 +48,6 @@ class PhpDefault extends \Nethgui\Controller\AbstractController
     {
         parent::prepareView($view);
         $view['MaxExecutionTimeDatasource'] = \Nethgui\Renderer\AbstractRenderer::hashToDatasource(array(
-                '0' => $view->translate('unlimited'),
 		'30' => $view->translate('${0} seconds', array(30)),
                 '60' => $view->translate('${0} seconds', array(60)),
                 '120' => $view->translate('${0} seconds', array(120)),
@@ -60,6 +59,7 @@ class PhpDefault extends \Nethgui\Controller\AbstractController
                 '480' => $view->translate('${0} seconds', array(480)),
                 '540' => $view->translate('${0} seconds', array(540)),
                 '600' => $view->translate('${0} seconds', array(600)),
+                '0' => $view->translate('unlimited'),
         ));
 
         $view['MemoryLimitDatasource'] = \Nethgui\Renderer\AbstractRenderer::hashToDatasource(array(
