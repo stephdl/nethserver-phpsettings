@@ -15,5 +15,7 @@ $L['PostMaxSize_label'] = 'Post Maximum Limit Warning';
 $L['PostMaxSizeMustBeSuperiorThanUpMaxFileSize'] = 'The Maximum size of post data allowed must be superior than the Maximum upload file size';
 $L['default'] = 'default';
 $L['${0} MB'] = '${0} Megabytes';
+$L['${0} G'] = '${0} Gigabytes';
 $L['${0} seconds'] = '${0} seconds';
 $L['PhpVersion_default_label'] = 'Default Php Version';
+$L['unlimited'] = 'unlimited';

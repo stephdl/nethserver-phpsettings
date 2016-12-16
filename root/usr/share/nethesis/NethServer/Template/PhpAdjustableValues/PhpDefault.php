@@ -3,7 +3,7 @@ echo $view->header()->setAttribute('template', $T('PhpDefaultAdjustableValues_Ti
 
 echo $view->panel()
 
-->insert($view->checkbox('AllowUrlFopen', '1')->setAttribute('uncheckedValue', 'Off'))
+->insert($view->checkbox('AllowUrlFopen', 'On')->setAttribute('uncheckedValue', 'Off'))
 
 ->insert($view->slider('MemoryLimit', $view::SLIDER_ENUMERATIVE | $view::LABEL_ABOVE)
    ->setAttribute('label', $T('Php memory limit (${0})')))
