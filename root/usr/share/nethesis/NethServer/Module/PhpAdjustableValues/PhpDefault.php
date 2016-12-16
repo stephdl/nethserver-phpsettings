@@ -63,10 +63,6 @@ class PhpDefault extends \Nethgui\Controller\AbstractController
         ));
 
         $view['MemoryLimitDatasource'] = \Nethgui\Renderer\AbstractRenderer::hashToDatasource(array(
-                '32' => $view->translate('${0} MB', array(32)),
-                '50' => $view->translate('${0} MB', array(50)),
-                '75' => $view->translate('${0} MB', array(75)),
-                '100' => $view->translate('${0} MB', array(100)),
                 '128' => $view->translate('${0} MB', array(128)),
                 '150' => $view->translate('${0} MB', array(150)),
                 '175' => $view->translate('${0} MB', array(175)),
