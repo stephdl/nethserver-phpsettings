@@ -1,6 +1,6 @@
 Summary: NethServer configuration for php settings
 Name: nethserver-phpsettings
-Version: 1.1.0
+Version: 1.1.1
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -52,8 +52,11 @@ rm -rf $RPM_BUILD_ROOT
 %files -f e-smith-%{version}-filelist
 %defattr(-,root,root)
 
-#%dir %{_nseventsdir}/%{name}-update
+%dir %{_nseventsdir}/%{name}-update
 %changelog
+* Mon Dec 19 2016 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.1-1-ns7
+- php setting for default version is tab based
+
 * Thu Oct 20 2016 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.0-1-ns7
 - NS7 version
 

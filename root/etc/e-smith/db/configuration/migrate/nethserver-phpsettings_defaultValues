@@ -1,0 +1,21 @@
+{
+
+#used by nethserver-phpsettings
+#to set default values in e-smith database
+
+use esmith::ConfigDB;
+my $db = esmith::ConfigDB->open;
+
+my $php = $db->get('php');
+$db->set_value('php','configuration') unless $php;
+
+my $MaxExecutionTime = $db->get_prop('php','MaxExecutionTime');
+my $MemoryLimit = $db->get_prop('php','MemoryLimit');
+my $PostMaxSize = $db->get_prop('php','PostMaxSize');
+my $UploadMaxFilesize = $db->get_prop('php','UploadMaxFilesize');
+
+$db->set_prop('php','MaxExecutionTime','0') unless $MaxExecutionTime;
+$db->set_prop('php','MemoryLimit','128') unless $MemoryLimit;
+$db->set_prop('php','PostMaxSize','8') unless $PostMaxSize;
+$db->set_prop('php','UploadMaxFilesize','2') unless $UploadMaxFilesize;
+}

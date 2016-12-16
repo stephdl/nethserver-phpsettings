@@ -1,0 +1,11 @@
+{
+my $auf = ${php}{AllowUrlFopen} || 'On';
+my $mfu = ${php}{MaxFileUpload} || '20';
+my $mit = ${php}{MaxInputTime} || '60';
+
+$OUT = qq (
+allow_url_fopen = $auf
+max_file_uploads = $mfu
+max_input_time = $mit
+);
+}
