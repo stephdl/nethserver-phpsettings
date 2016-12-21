@@ -14,8 +14,6 @@ Php Settings
 For each version of Php you can set specific settings to the php.ini
 
 
-Modify the Shared Folder php settings.
-
 Allow PHP access to remote files
     When the allow_url_fopen directive is enabled, you can write php scripts
     that open remote files as if they are local files.
@@ -46,3 +44,8 @@ Maximum time to parse input data
 
 Maximum number of uploaded files
     The maximum number of files allowed to be uploaded simultaneously (max_file_uploads).
+
+.. raw:: html
+
+   {{{INCLUDE NethServer_Module_PhpAdjustableValues_*.html}}}
+
