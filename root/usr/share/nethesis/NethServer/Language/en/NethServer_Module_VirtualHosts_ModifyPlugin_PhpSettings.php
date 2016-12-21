@@ -17,3 +17,4 @@ $L['${0} MB'] = '${0} Megabytes';
 $L['${0} G'] = '${0} Gigabytes';
 $L['PhpMemoryLimit_label'] = 'Memory limit errors';
 $L['PhpPostMaxSize_label'] = 'Post maximum size errors';
+$L['default_php_warning_label'] = 'Apache must be the handler of PHP if you want to modify the values here, otherwise use the Php Settings panel';
