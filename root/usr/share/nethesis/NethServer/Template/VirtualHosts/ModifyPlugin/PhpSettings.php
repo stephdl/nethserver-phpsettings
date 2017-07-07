@@ -1,7 +1,7 @@
 <?php
 
 /* @var $view \Nethgui\Renderer\Xhtml */
-echo "<div id='bc_module_warning' class='ui-state-highlight'><span class='ui-icon ui-icon-info'></span>".$T('default_php_warning_label')."</div>";
+//echo "<div id='bc_module_warning' class='ui-state-highlight'><span class='ui-icon ui-icon-info'></span>".$T('default_php_warning_label')."</div>";
 
 echo $view->fieldsetSwitch('Status', 'enabled', $view::FIELDSETSWITCH_CHECKBOX)->setAttribute('uncheckedValue', 'disabled')
 ->insert($view->checkbox('AllowUrlfOpen', 'enabled')->setAttribute('uncheckedValue', 'disabled'))
