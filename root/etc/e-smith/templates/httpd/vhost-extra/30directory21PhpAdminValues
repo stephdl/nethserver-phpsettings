@@ -1,7 +1,13 @@
 {
     use esmith::ConfigDB;
 
-    my $vdb = esmith::ConfigDB->open_ro('vhosts') || die("Can't open vhosts db");
+my $vdb = esmith::ConfigDB->open_ro('vhosts') || die("Can't open vhosts db");
+
+$phpCustomSettings = $vdb->get_prop("$VhostName",'PhpCustomSettings') || 'disabled';
+$PhpRhVersion = $vdb->get_prop("$VhostName",'PhpRhVersion') || '';
+
+return "" if ($phpCustomSettings eq 'enabled');
+return "" if ($PhpRhVersion ne '');
 
 my $AllowUrlfOpen = $vdb->get_prop("$VhostName",'PhpAllowUrlfOpen') || 'enabled';
 my $MemoryLimit = $vdb->get_prop("$VhostName",'PhpMemoryLimit') || '0';

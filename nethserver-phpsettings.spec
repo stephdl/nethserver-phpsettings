@@ -1,6 +1,6 @@
 Summary: NethServer configuration for php settings
 Name: nethserver-phpsettings
-Version: 1.1.2
+Version: 1.1.3
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -41,6 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+* Wed Nov 20 2019 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.3-1-ns7
+- Do not breack future php scl core
+
 * Fri Jul 07 2017 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.1.2-1-ns7
 - remove the warning for php settings concerning the apache handler
 
